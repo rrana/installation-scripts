@@ -2,6 +2,12 @@
 
 # Redis installation script. Tested in ubuntu 12.04 with redis version 2.6.13
 
+# Sudo is required to install everything properly
+if [ "$(whoami)" != "root" ]; then
+echo "You need to use sudo to run this script"
+exit 0;
+fi
+
 cd /home/ubuntu && mkdir redis-installation
 cd /home/ubuntu/redis-installation
 
